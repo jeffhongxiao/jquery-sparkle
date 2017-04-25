@@ -1,0 +1,23 @@
+{
+  "name": "jquery-sparkle",
+  "homepage": "https://github.com/jeffhongxiao/jquery-sparkle",
+  "authors": [
+    "Jeff Xiao <jeffhongxiao@gmail.com>"
+  ],
+  "description": "jQuery's Don't-Repeat-Yourself Plugin/Effect Framework",
+  "main": "",
+  "keywords": [
+    "jquery",
+    "extension",
+    "singleclick",
+    "doubleclick"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
