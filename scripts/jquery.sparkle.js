@@ -1111,7 +1111,7 @@ String.prototype.queryStringToJSON = String.prototype.queryStringToJSON || funct
 	 */
 	$.fn.parentsAndSelf = $.fn.parentsAndSelf || function(selector){
 		var $this = $(this);
-		return $this.parents(selector).andSelf().filter(selector);
+		return $this.parents(selector).addBack().filter(selector);
 	};
 
 	/**
@@ -1125,7 +1125,7 @@ String.prototype.queryStringToJSON = String.prototype.queryStringToJSON || funct
 	 */
 	$.fn.findAndSelf = $.fn.findAndSelf || function(selector){
 		var $this = $(this);
-		return $this.find(selector).andSelf().filter(selector);
+		return $this.find(selector).addBack().filter(selector);
 	};
 
 	/**
