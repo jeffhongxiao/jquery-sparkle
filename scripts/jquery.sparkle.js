@@ -1553,7 +1553,7 @@ String.prototype.queryStringToJSON = String.prototype.queryStringToJSON || funct
 			if ( enterKey ) {
 				// Our event
 				event.type = 'enter';
-				$.event.handle.apply(this, [event]);
+				$.event.dispatch.apply(this, [event]);
 				return true;
 			}
 			// Not our event
@@ -1589,7 +1589,7 @@ String.prototype.queryStringToJSON = String.prototype.queryStringToJSON || funct
 			if ( moz || escapeKey ) {
 				// Our event
 				event.type = 'cancel';
-				$.event.handle.apply(this, [event]);
+				$.event.dispatch.apply(this, [event]);
 				return true;
 			}
 			// Not our event
@@ -1649,7 +1649,7 @@ String.prototype.queryStringToJSON = String.prototype.queryStringToJSON || funct
 					$el.data('lastclick-clicks',0);
 					// Fire Event
 					event.type = 'lastclick';
-					$.event.handle.apply(Me, [event,clicks])
+					$.event.dispatch.apply(Me, [event,clicks])
 				},500);
 				// Store Timeout
 				$el.data('lastclick-timeout',timeout);
@@ -1705,7 +1705,7 @@ String.prototype.queryStringToJSON = String.prototype.queryStringToJSON || funct
 				if ( $el.data('firstclick-clicks') === 1 ) {
 					// Fire Event
 					event.type = 'firstclick';
-					$.event.handle.apply(Me, [event])
+					$.event.dispatch.apply(Me, [event])
 				}
 				// Handle Timeout for when All Clicks are Completed
 				var timeout = setTimeout(function(){
@@ -1778,7 +1778,7 @@ String.prototype.queryStringToJSON = String.prototype.queryStringToJSON || funct
 						// There was only a single click performed
 						// Fire Event
 						event.type = 'singleclick';
-						$.event.handle.apply(Me, [event])
+						$.event.dispatch.apply(Me, [event])
 					}
 				},500);
 				// Store Timeout
